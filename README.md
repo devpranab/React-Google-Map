@@ -12,3 +12,8 @@ https://react-google-maps-api-docs.netlify.app/#marker
   - Provide a api key
 
 latlong.net - to get lat, lng value  
+
+# Display Driving Direction and Route on Google Map
+https://react-google-maps-api-docs.netlify.app/#directionsservice  
+
+# Dynamically search and display travelling route on Google Map
