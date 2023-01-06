@@ -14,17 +14,19 @@ const position = {
 
 
 
-const Direction = () => {
+const Direction = ({origin, destination}) => {
   const [DirectionResponse, setDirectionResponse] = useState(null);
   return (
     <LoadScript googleMapsApiKey={API_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={position} zoom={12}>
         {/* Child components, such as markers, info windows, etc. */}
+        {
+          origin !== "" && destination !== "" && 
         <DirectionsService
                   // required
                   options={{
-                    destination: 'Kolkata Dumdum WB India',
-                    origin: 'Nadia WB India',
+                    destination: destination,
+                    origin: origin,
                     travelMode: 'DRIVING'
                   }}
                   // required
@@ -34,6 +36,7 @@ const Direction = () => {
                     }
                   }}
                 />
+              }
                 {
               DirectionResponse && <DirectionsRenderer
                   // required
